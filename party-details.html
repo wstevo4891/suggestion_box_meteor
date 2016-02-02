@@ -1,0 +1,19 @@
+<a class="back blue text-center col-md-6 col-md-offset-3" href="/suggestions">Back</a>
+
+<div class="suggestion-comments col-md-8 col-md-offset-2">
+  <h2 class="suggestion-title" ng-model="partyDetails.suggestion.title">{{ suggestion.title }}</h2>
+  <div class="comment" ng-repeat="comment in partyDetails.comments | orderBy:'-upvotes'">
+  	<h3 class="comment-body">{{ comment.body }}</h3>
+  	<p>
+  	  <span class="glyphicon glyphicon-plus-sign green pointer" ng-click="partyDetails.upVoteComment(comment)"></span> Upvotes: {{ comment.upvotes }}
+  	</p>
+  </div>
+</div>
+
+<form ng-submit="partyDetails.addComment()" class="addSugg col-md-8 col-md-offset-2">
+  <h3 class="blue"> Add a Comment </h3>
+  <div class="form-group">
+	<input type="text" class="form-control" placeholder="Comments here" ng-model="body"/>
+  </div>
+  <button type="submit" class="btn btn-primary">Comment</button>
+</form>

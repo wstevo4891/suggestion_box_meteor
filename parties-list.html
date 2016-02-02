@@ -1,0 +1,21 @@
+<div class="row">
+  <ul class="col-sm-8 col-sm-offset-2">
+    <li class="post" ng-repeat="suggestion in partiesList.suggestions">
+      <h2 class="title">{{suggestion.title}}</h2>
+      <p>
+        <span class="glyphicon glyphicon-plus-sign green upvotes comments" ng-click="partiesList.upVote($index)"></span> Upvotes: {{ suggestion.upvotes }} | <a class="blue comment-link" ui-sref="partyDetails({ suggestionId: suggestion._id })">Comments</a>
+      </p>
+      <button ng-click="partiesList.removeSuggestion(suggestion)">X</button>
+    </li>
+  </ul>
+</div>
+
+<div class="row">
+  <form class="addSugg col-sm-8 col-sm-offset-2">
+    <h3 class="blue">Submit Your Suggestion</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Great ideas here" ng-model="partiesList.newSuggestion.title" />
+    </div>
+    <button ng-click="partiesList.addSuggestion()" class="btn btn-primary">Suggest</button>
+  </form>
+</div>

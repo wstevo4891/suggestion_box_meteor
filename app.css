@@ -1,0 +1,101 @@
+/* CSS declarations go here */
+body, html {
+	background: rgb(39,42,51);
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	height: auto;
+}
+
+.header {
+	border-bottom: solid 1px white;
+	padding: 2em;
+}
+
+.header-img @media only screen and (max-width: 640) {
+	width: 5em;
+	margin: 0 auto;
+}
+
+
+h1 {
+	font-size: 4em;
+	font-weight: 100;
+	font-style: italic;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: 100;
+}
+
+.suggestion-title {
+	color: white;
+	font-size: 3em;
+	padding-bottom: 0.5em;
+	border-bottom: solid 1px white;
+}
+
+.blue {
+	color: rgb(110,191,212);
+}
+
+.main {
+	margin: 40px 0;
+}
+
+.post {
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	margin: 0 0 8px;
+	padding: 20px 0;
+	border-bottom: dotted 1px white;
+	list-style-type: none;
+}
+
+.post:hover {
+	cursor: pointer;
+}
+
+.comment-link:hover {
+	text-decoration: none;
+}
+
+.comment {
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	margin: 0 0 8px;
+	padding: 20px 0;
+	border-bottom: dotted 1px white;
+}
+
+.comment-body {
+	font-size: 1.5em;
+	font-weight: 200;
+}
+
+.green {
+	color: rgb(32,255,61);
+}
+
+.upvotes {
+	font-weight: bold;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.addSugg {
+	margin-top: 1em;
+	margin-bottom: 4em;
+}
+
+.back {
+	font-size: 2em;
+}
+
+.back:hover {
+	text-decoration: none;
+}
